@@ -63,8 +63,7 @@ class MyHomePage extends StatelessWidget {
                           )
                         ),
                         padding: EdgeInsets.all(10),
-                        child: Text(
-                          
+                        child: Text(                          
                           tr.value.toString(),
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -74,9 +73,24 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(tr.title),
-                          Text(tr.date.toString()),
+                          Text(
+                            tr.title,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),   
+                            ),
+                          Text(
+                            tr.date.toString(),
+                            style: TextStyle(
+                              color: Colors.grey[600],
+                            ),
+
+                            
+                            
+                            ),
                         ],
                       )
                     ],
