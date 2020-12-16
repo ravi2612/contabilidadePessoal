@@ -64,8 +64,8 @@ flutter:
   fonts:
     - family: OpenSans
       fonts:
-        - asset: assets/fonts/Schyler-Regular.ttf
-        - asset: assets/fonts/Schyler-Bold.ttf
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
           weight: 700
     - family: Quicksand
       fonts:
