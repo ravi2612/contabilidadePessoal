@@ -3,20 +3,17 @@ import '../models/transaction.dart';
 import 'transaction_Item.dart';
 
 //
-class TransactionList extends StatefulWidget {
+class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
   final void Function(String) onRemove;
 
   TransactionList(this.transactions, this.onRemove);
 
-  @override
-  _TransactionListState createState() => _TransactionListState();
-}
 
-class _TransactionListState extends State<TransactionList> {
+
   @override
   Widget build(BuildContext context) {
-    return widget.transactions.isEmpty
+    return transactions.isEmpty
         ? LayoutBuilder(
           builder: (ctx, constraints) {
             return Column(
@@ -39,16 +36,16 @@ class _TransactionListState extends State<TransactionList> {
           },
         )
          :ListView.builder(
-            itemCount: widget.transactions.length,
+            itemCount: transactions.length,
             itemBuilder: (ctx, index) {
-              final tr = widget.transactions[index];
+              final tr = transactions[index];
               return TransactionItem(
                 key: GlobalObjectKey(tr),
                 tr: tr, 
-                onRemove: widget.onRemove,
+                onRemove: onRemove,
               );
             },
         );
-  }
+    }
 }
 

@@ -39,8 +39,6 @@ class TransactionItem extends StatefulWidget {
       }
       
     
-  
-
   @override
   Widget build(BuildContext context) {
     return Card(
